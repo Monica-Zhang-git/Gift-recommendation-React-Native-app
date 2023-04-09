@@ -40,11 +40,18 @@ You should now be able to access the app through a Expo Go App.
 
 ## How to Use the App
 
+This application consists of three main pages: the input page, the loading page, and the results page.
+
 <p algin="center">
 <img src="https://github.com/Monica-Zhang-git/Img/blob/main/main.png" width=30% >
 <img src="https://github.com/Monica-Zhang-git/Img/blob/main/loading.png" width=30% >
 <img src="https://github.com/Monica-Zhang-git/Img/blob/main/results.png" width=30% >
 </p>
-<!-- ![Main Page](https://github.com/Monica-Zhang-git/Img/blob/main/main.png)
-![Loading Page](https://github.com/Monica-Zhang-git/Img/blob/main/loading.png)
-![Results Page](https://github.com/Monica-Zhang-git/Img/blob/main/results.png) -->
+
+On the input page, users can enter the characteristics of the person they are buying a gift for, including their age, gender, the price range of the gift, and their hobbies. Once the user has entered this information, they can click the 'Generate Gift Ideas' button to begin the gift recommendation process.
+
+Next, the user is taken to the loading page, where they will wait for the gift recommendations to be generated.
+
+Once the recommendations are ready, the user is automatically redirected to the results page, where they can view the gift recommendations.
+
+If the user wants to generate new gift ideas, they can click the 'Try Again' button to go back to the input page and start over.
