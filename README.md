@@ -6,7 +6,7 @@ Users can input the characteristics of the person they want to send a gift to an
 
 Using AWS to fetch data provides an added layer of security for the OpenAI API Key and makes it more convenient for users to get gift recommendations.
 
-## Setup
+## How to Install and Run the App
 
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) (Node.js version >= 14.6.0 required)
 
@@ -37,3 +37,9 @@ You should now be able to access the app through a Expo Go App.
    ```
 
 3. You could Scan the QR code that showed in the terminal with the Camera app(ios) or Expo Go (Android).
+
+## How to Use the App
+
+![Main Page](https://github.com/Monica-Zhang-git/Img/blob/main/main.png)
+![Loading Page](https://github.com/Monica-Zhang-git/Img/blob/main/loading.png)
+![Results Page](https://github.com/Monica-Zhang-git/Img/blob/main/results.png)
