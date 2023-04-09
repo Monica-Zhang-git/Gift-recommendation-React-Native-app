@@ -40,9 +40,9 @@ You should now be able to access the app through a Expo Go App.
 
 ## How to Use the App
 
-<img src="https://github.com/Monica-Zhang-git/Img/blob/main/main.png" height="300"  >
-<img src="https://github.com/Monica-Zhang-git/Img/blob/main/loading.png" height="300" >
-<img src="https://github.com/Monica-Zhang-git/Img/blob/main/results.png" height="300"  >
+<img src="https://github.com/Monica-Zhang-git/Img/blob/main/main.png" width="300"  >
+<img src="https://github.com/Monica-Zhang-git/Img/blob/main/loading.png" width="300" >
+<img src="https://github.com/Monica-Zhang-git/Img/blob/main/results.png" width="300"  >
 <!-- ![Main Page](https://github.com/Monica-Zhang-git/Img/blob/main/main.png)
 ![Loading Page](https://github.com/Monica-Zhang-git/Img/blob/main/loading.png)
 ![Results Page](https://github.com/Monica-Zhang-git/Img/blob/main/results.png) -->
