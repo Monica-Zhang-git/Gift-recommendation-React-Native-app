@@ -21,6 +21,16 @@ The backend uses the [Next.js](https://nextjs.org/) framework with OpenAI API [q
    $ npm start
    ```
 
-You should now be able to access the app at [exp://192.168.1.102:19000](exp://192.168.1.102:19000)!
+You should now be able to access the app through a Expo Go App.
 
-# Gift
+1. Download a [Expo GO App](https://apps.apple.com/app/apple-store/id982107779).
+
+2. Choose a device in the terminal according your needs.
+
+   ```bash
+   › Press a │ open Android
+   › Press i │ open iOS simulator
+   › Press w │ open web
+   ```
+
+3. You could download a Expo Go App then Scan the QR code that showed in the terminal with the Camera app(ios) or Expo Go (Android).
