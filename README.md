@@ -7,7 +7,7 @@ The backend uses the [Next.js](https://nextjs.org/) framework with OpenAI API [q
 
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) (Node.js version >= 14.6.0 required)
 
-2. Clone this repository
+2. Clone this [repository](https://github.com/Monica-Zhang-git/Gift-React_Native-App.git)
 
 3. Install the requirements
 
@@ -33,4 +33,4 @@ You should now be able to access the app through a Expo Go App.
    › Press w │ open web
    ```
 
-3. You could download a Expo Go App then Scan the QR code that showed in the terminal with the Camera app(ios) or Expo Go (Android).
+3. You could Scan the QR code that showed in the terminal with the Camera app(ios) or Expo Go (Android).
