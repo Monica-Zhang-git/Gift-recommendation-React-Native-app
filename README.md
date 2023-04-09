@@ -1,7 +1,10 @@
 # Gift recommendation - React Native app
 
-This is a gift recommendations generator mobile app with [React Native](https://reactnative.dev/) and [Expo](https://docs.expo.dev/tutorial/introduction/).
-The backend uses the [Next.js](https://nextjs.org/) framework with OpenAI API [quickstart tutorial](https://platform.openai.com/docs/quickstart).
+This mobile app generates gift recommendations using [React Native](https://reactnative.dev/) and [Expo](https://docs.expo.dev/tutorial/introduction/). The backend is built using the [Next.js](https://nextjs.org/) framework and utilizes the [OpenAI API](https://platform.openai.com/docs/quickstart) for generating gift ideas.
+
+Users can input the characteristics of the person they want to send a gift to and click the 'Generate Gift Ideas' button. The app then fetches data from an AWS link where a generate.js file is stored that fetches data from the OpenAI API.
+
+Using AWS to fetch data provides an added layer of security for the OpenAI API Key and makes it more convenient for users to get gift recommendations.
 
 ## Setup
 
