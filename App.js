@@ -14,11 +14,13 @@ import {
 } from "react-native";
 import Constants from "expo-constants";
 
+const BACKGROUNDCOLOR = "#fc6208";
+
 export default function App() {
   const [gender, setGender] = useState("man");
-  const [age, setAge] = useState(30);
-  const [price_Min, setprice_Min] = useState(25);
-  const [price_Max, setprice_Max] = useState(100);
+  const [age, setAge] = useState();
+  const [price_Min, setprice_Min] = useState("10");
+  const [price_Max, setprice_Max] = useState("100");
   const [hobbies, setHobbies] = useState("");
 
   const [loading, setLoading] = useState(false);
@@ -34,12 +36,20 @@ export default function App() {
     setLoading(true);
     setResult("");
     try {
+      const body = JSON.stringify({
+        price_Min,
+        price_Max,
+        gender,
+        age,
+        hobbies,
+      });
+      console.log(body);
       const response = await fetch(`${API_URL}/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ price_Min, price_Max, gender, age, hobbies }),
+        body,
       });
       const data = await response.json();
       setResult(data.result);
@@ -80,6 +90,13 @@ export default function App() {
     );
   }
 
+  const isValid =
+    !!age &&
+    !isNaN(price_Min || NaN) &&
+    price_Min >= 0 &&
+    !isNaN(price_Max || NaN) &&
+    price_Max > price_Min;
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Gift Recommendations</Text>
@@ -88,11 +105,11 @@ export default function App() {
         <ScrollView>
           <Text style={styles.label}>Age</Text>
           <TextInput
-            placeholder="Age"
+            placeholder="Put your age here"
             keyboardType="numeric"
             style={styles.input}
-            value={age.toString()}
-            onChangeText={(s) => setAge(Number.parseInt(s))}
+            value={age}
+            onChangeText={setAge}
           />
 
           <Text style={styles.label}>Price from</Text>
@@ -100,8 +117,8 @@ export default function App() {
             placeholder="Price from"
             keyboardType="numeric"
             style={styles.input}
-            value={price_Min.toString()}
-            onChangeText={(s) => setprice_Min(Number.parseInt(s))}
+            value={price_Min}
+            onChangeText={setprice_Min}
           />
 
           <Text style={styles.label}>Price to</Text>
@@ -109,8 +126,8 @@ export default function App() {
             placeholder="Price to"
             keyboardType="numeric"
             style={styles.input}
-            value={price_Max.toString()}
-            onChangeText={(s) => setprice_Max(Number.parseInt(s))}
+            value={price_Max}
+            onChangeText={setprice_Max}
           />
 
           <Text style={styles.label}>Hobbies</Text>
@@ -127,7 +144,7 @@ export default function App() {
               style={[
                 styles.selector,
                 gender === "man" && {
-                  backgroundColor: "#fc6208",
+                  backgroundColor: BACKGROUNDCOLOR,
                   color: "white",
                 },
               ]}
@@ -139,7 +156,7 @@ export default function App() {
               style={[
                 styles.selector,
                 gender === "woman" && {
-                  backgroundColor: "#fc6208",
+                  backgroundColor: BACKGROUNDCOLOR,
                   color: "white",
                 },
               ]}
@@ -147,8 +164,22 @@ export default function App() {
               Woman
             </Text>
           </View>
-          <Pressable onPress={onSubmit} style={styles.button}>
-            <Text style={styles.buttonText}>Generate gift ideas</Text>
+          <Pressable
+            onPress={onSubmit}
+            style={{
+              ...styles.button,
+              backgroundColor: isValid ? BACKGROUNDCOLOR : "gainsboro",
+            }}
+            disabled={!isValid}
+          >
+            <Text
+              style={{
+                ...styles.buttonText,
+                color: isValid ? "white" : "black",
+              }}
+            >
+              Generate gift ideas
+            </Text>
           </Pressable>
         </ScrollView>
       </TouchableWithoutFeedback>
@@ -203,7 +234,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: "auto",
-    backgroundColor: "#fc6208",
+    backgroundColor: BACKGROUNDCOLOR,
     padding: 16,
     borderRadius: 4,
     alignItems: "center",
@@ -211,7 +242,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "white",
-    fontWeight: "bold",
+    // fontWeight: "bold",
   },
   loadingContainer: {
     alignItems: "center",
