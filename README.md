@@ -1,4 +1,4 @@
-# Gift recommendation - React Native app
+# Gift RecommendationBot - React Native app
 
 This mobile app generates gift recommendations using [React Native](https://reactnative.dev/) and [Expo](https://docs.expo.dev/tutorial/introduction/). The backend is built using the [Next.js](https://nextjs.org/) framework and utilizes the [OpenAI API](https://platform.openai.com/docs/quickstart) for generating gift ideas.
 
